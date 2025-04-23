@@ -1,0 +1,11 @@
+Flask
+requests
+avwx-engine
+geopy
+Shapely
+pytest
+pytest-mock 
+Flask-CORS 
+google-generativeai
+websockets
+dotenv
