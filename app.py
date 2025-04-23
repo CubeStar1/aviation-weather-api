@@ -6,12 +6,12 @@ from flask_cors import CORS # Import CORS
 # This assumes the Flask app is run with the parent directory in PYTHONPATH
 # or using 'flask run' from the parent directory after setting FLASK_APP=api.index
 try:
-    from api.routes.metar import get_metar_summary
-    from api.routes.pirep import get_pirep_summary
-    from api.routes.sigmet import get_airsigmet_summary
-    from api.routes.flight_path import get_flight_path_weather
-    from api.routes.dashboard import get_basic_weather_data
-    from api.routes.ai_summary import configure_gemini, generate_weather_summary
+    from routes.metar import get_metar_summary
+    from routes.pirep import get_pirep_summary
+    from routes.sigmet import get_airsigmet_summary
+    from routes.flight_path import get_flight_path_weather
+    from routes.dashboard import get_basic_weather_data
+    from routes.ai_summary import configure_gemini, generate_weather_summary
 except ImportError:
     print("Attempting relative imports for routes...")
     from routes.metar import get_metar_summary
