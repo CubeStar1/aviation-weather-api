@@ -8,7 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-from ..utils import get_utc_time_for_api
+from utils import get_utc_time_for_api
 
 
 def get_raw_metar(airport_id):

@@ -3,7 +3,7 @@ import json
 from flask import jsonify
 import logging
 
-from ..utils import get_utc_time_for_api
+from utils import get_utc_time_for_api
 
 logger = logging.getLogger(__name__)
 

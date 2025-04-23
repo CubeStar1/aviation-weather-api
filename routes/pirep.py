@@ -4,7 +4,7 @@ from collections import defaultdict
 import json
 
 # Import the utility function
-from ..utils import get_utc_time_for_api
+from utils import get_utc_time_for_api
 
 
 def get_pirep_summary(location_ids):
