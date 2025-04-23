@@ -69,7 +69,7 @@ def generate_weather_summary(briefing_data):
     prompt += f"\n\n{prompt_instructions}"
 
     try:
-        model = genai.GenerativeModel("gemini-2.5-pro-exp-03-25")
+        model = genai.GenerativeModel("gemini-2.5-flash-preview-04-17")
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
