@@ -39,6 +39,8 @@ def generate_weather_summary(briefing_data):
             input_data.append(f"Cloud condition: {data['cloud']}")
         if data.get('remarks'):
             input_data.append(f"Remarks: {'; '.join(data['remarks'])}")
+        if data.get('vfr_allowed'):
+            input_data.append(f"VFR is allowed: {data['vfr_allowed']}")
             
     # Add PIREP summaries
     input_data.append("\n### PIREP Summary:")
@@ -51,6 +53,11 @@ def generate_weather_summary(briefing_data):
     for sigmet in sigmet_data:
         if sigmet.get('simplified_summary'):
             input_data.append(f"\n{sigmet['simplified_summary']}")
+
+    # Add VFR info
+    input_data.append("\n### VFR Info:")
+    
+
             
     # Create the prompt template parts
     prompt_prefix = "You are an aviation weather assistant. Based on the provided weather observations and reports, write a pre-flight briefing for the route"

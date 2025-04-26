@@ -22,11 +22,13 @@ except ImportError:
     from routes.ai_summary import configure_gemini, generate_weather_summary
 
 import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app) 
 
-GEMINI_API_KEY = "AIzaSyAoiHl2F6SMyinRe6pwrBbBl-6L22pexe0"
+load_dotenv()
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 if GEMINI_API_KEY:
     configure_gemini(GEMINI_API_KEY)
 
